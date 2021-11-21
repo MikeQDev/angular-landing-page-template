@@ -1,0 +1,29 @@
+.container {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid grey;
+}
+
+.button-section {
+  margin: 25px 0;
+}
+
+// TODO: make mobile-first
+@media (min-width: 1366px) {
+  :host(.displayImage) {
+    .container {
+      .description-section {
+        max-width: 65%;
+      }
+      background-repeat: no-repeat;
+      background-position-x: right;
+      background-position-y: center;
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .container {
+    background-image: none !important;
+  }
+}

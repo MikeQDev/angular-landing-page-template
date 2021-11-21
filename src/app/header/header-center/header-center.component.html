@@ -1,0 +1,18 @@
+<div
+  class="container"
+  [ngStyle]="{ 'background-image': imageCss, 'text-align': orientation }"
+>
+  <div class="headline-section">
+    <h1>{{ headline }}</h1>
+  </div>
+  <div class="description-section">
+    <p>{{ description }}</p>
+  </div>
+  <div class="button-section">
+    <lp-button
+      *ngFor="let b of buttons"
+      [text]="b.text"
+      [href]="b.href"
+    ></lp-button>
+  </div>
+</div>
