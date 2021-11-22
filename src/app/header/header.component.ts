@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input, OnInit } from '@angular/core'
+import { Component, HostBinding, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'lp-header',
@@ -6,15 +6,15 @@ import { Component, HostBinding, Input, OnInit } from '@angular/core'
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  @Input() orientation = 'center' // or, left
-  @HostBinding('class.displayImage') displayImage = false
-  @Input() headline = 'headline'
-  @Input() description = 'description'
+  @Input() orientation = 'center'; // or, left
+  @HostBinding('class.displayImage') displayImage = false;
+  @Input() headline = 'headline';
+  @Input() description = 'description';
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  @Input() buttons: any // TODO: secondary button color
-  @Input() imageCss = 'none'
+  @Input() buttons: any; // TODO: secondary button color
+  @Input() imageCss = 'none';
 
   ngOnInit(): void {
-    this.displayImage = this.orientation !== 'center'
+    this.displayImage = this.orientation !== 'center';
   }
 }

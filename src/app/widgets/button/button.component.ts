@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'lp-button',
@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core'
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
-  @Input() text = ''
-  @Input() href = ''
+  @Input() text = '';
+  @Input() href = '';
 }

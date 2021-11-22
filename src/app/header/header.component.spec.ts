@@ -1,24 +1,24 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing'
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderSingleComponent } from './header-center.component'
+import { HeaderSingleComponent } from './header-center.component';
 
 describe('HeaderSingleComponent', () => {
-  let component: HeaderSingleComponent
-  let fixture: ComponentFixture<HeaderSingleComponent>
+  let component: HeaderSingleComponent;
+  let fixture: ComponentFixture<HeaderSingleComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [HeaderSingleComponent],
-    }).compileComponents()
-  })
+    }).compileComponents();
+  });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderSingleComponent)
-    component = fixture.componentInstance
-    fixture.detectChanges()
-  })
+    fixture = TestBed.createComponent(HeaderSingleComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
   it('should create', () => {
-    expect(component).toBeTruthy()
-  })
-})
+    expect(component).toBeTruthy();
+  });
+});
