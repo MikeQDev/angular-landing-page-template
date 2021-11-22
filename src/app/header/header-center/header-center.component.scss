@@ -11,7 +11,7 @@
 }
 
 // TODO: make mobile-first
-@media (min-width: variables.$mobile-min-width) {
+@media (min-width: variables.$mobile-width) {
   :host(.displayImage) {
     .container {
       .description-section {
@@ -24,7 +24,7 @@
   }
 }
 
-@media (max-width: (variables.$mobile-max-width - 1)) {
+@media (max-width: (variables.$mobile-width - 1)) {
   .container {
     background-image: none !important;
   }
