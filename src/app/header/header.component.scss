@@ -3,11 +3,16 @@
 .container {
   margin: 5px;
   padding: 5px;
-  border: 1px solid grey;
+  border: 1px solid lightgray;
 }
 
 .button-section {
-  margin: 25px 0;
+  margin: 25px 0 10px;
+  p.below-button-text {
+    margin: 0;
+    font-size: 12px;
+    color: grey;
+  }
 }
 
 // TODO: make mobile-first

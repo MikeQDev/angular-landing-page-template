@@ -22,4 +22,5 @@ export class AppComponent {
     { text: 'buttonA', href: 'https://google.com' },
     { text: 'buttonB', href: 'https://google.com' },
   ];
+  belowButtonText = 'No credit card required.';
 }

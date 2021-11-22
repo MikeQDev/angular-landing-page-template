@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   @Input() buttons: any; // TODO: secondary button color
   @Input() imageCss = 'none';
+  @Input() belowButtonText = '';
 
   ngOnInit(): void {
     this.displayImage = this.orientation !== 'center';
