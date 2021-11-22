@@ -1,0 +1,6 @@
+@use '/src/variables.scss';
+
+.main-content {
+  margin: 0 auto;
+  max-width: variables.$mobile-width;
+}
