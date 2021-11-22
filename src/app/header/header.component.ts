@@ -1,11 +1,11 @@
 import { Component, HostBinding, Input, OnInit } from '@angular/core'
 
 @Component({
-  selector: 'lp-header-center',
-  templateUrl: './header-center.component.html',
-  styleUrls: ['./header-center.component.scss'],
+  selector: 'lp-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss'],
 })
-export class HeaderCenterComponent implements OnInit {
+export class HeaderComponent implements OnInit {
   @Input() orientation = 'center' // or, left
   @HostBinding('class.displayImage') displayImage = false
   @Input() headline = 'headline'
