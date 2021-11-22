@@ -1,5 +1,9 @@
 # LandingPage
 
+Quickly generate landing pages based on premade components
+
+TODO: explore breaking out components into separate librraries, for easier versioning & updating
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
 
 ## Development server
