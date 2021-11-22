@@ -1,3 +1,5 @@
+@use '/src/variables.scss';
+
 .container {
   margin: 5px;
   padding: 5px;
@@ -9,7 +11,7 @@
 }
 
 // TODO: make mobile-first
-@media (min-width: 1366px) {
+@media (min-width: variables.$mobile-min-width) {
   :host(.displayImage) {
     .container {
       .description-section {
@@ -22,7 +24,7 @@
   }
 }
 
-@media (max-width: 1366px) {
+@media (max-width: (variables.$mobile-max-width - 1)) {
   .container {
     background-image: none !important;
   }
