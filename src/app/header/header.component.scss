@@ -1,18 +1,36 @@
 @use '/src/variables.scss';
 
 .container {
-  margin: 5px;
-  padding: 5px;
+  margin: 5px 0;
+  padding: 5px 5px 20px;
   border: 1px solid lightgray;
 }
 
-.button-section {
-  margin: 25px 0 10px;
-  p.below-button-text {
-    margin: 0;
-    font-size: 12px;
-    color: grey;
+.headline-section {
+  h1 {
+    margin: 10px 0;
   }
+}
+
+.description-section {
+  p {
+    margin: 0 0 10px;
+  }
+}
+
+.email-section {
+  lp-button {
+    margin: 0 0 0 -10px;
+  }
+  input {
+    font-size: 17px;
+  }
+}
+
+p.below-button-text {
+  margin: 0;
+  font-size: 12px;
+  color: grey;
 }
 
 // TODO: make mobile-first

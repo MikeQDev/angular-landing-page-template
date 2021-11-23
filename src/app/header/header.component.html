@@ -8,12 +8,31 @@
   <div class="description-section">
     <p>{{ description }}</p>
   </div>
-  <div class="button-section">
+  <div *ngIf="submitSettings" class="email-section">
+    <iframe name="noRedirect" id="noRedirect" style="display: none"></iframe>
+    <form [action]="submitSettings.target" method="POST" target="noRedirect">
+      <input
+        type="text"
+        name="emailName"
+        id="emailId"
+        placeholder="Enter email"
+        [size]="submitSettings.textFieldCssWidth || 10"
+      />
+      <lp-button
+        [text]="submitSettings.buttonText"
+        onclick="this.parentNode.submit()"
+      ></lp-button>
+    </form>
+  </div>
+  <div
+    *ngIf="buttons; instanceof: Array && buttons.length > 0"
+    class="button-section"
+  >
     <lp-button
       *ngFor="let b of buttons"
       [text]="b.text"
       [href]="b.href"
     ></lp-button>
-    <p class="below-button-text">{{ belowButtonText }}</p>
   </div>
+  <p class="below-button-text">{{ belowButtonText }}</p>
 </div>

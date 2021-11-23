@@ -7,5 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonComponent {
   @Input() text = '';
-  @Input() href = '';
+  @Input() href = '#clicked';
+  @Input() type = 'text';
 }
