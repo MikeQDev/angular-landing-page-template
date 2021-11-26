@@ -24,10 +24,7 @@
       </lp-button>
     </form>
   </div>
-  <div
-    *ngIf="buttons; instanceof: Array && buttons.length > 0"
-    class="button-section"
-  >
+  <div *ngIf="buttons?.length > 0" class="button-section">
     <lp-button
       *ngFor="let b of buttons"
       [text]="b.text"
