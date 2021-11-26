@@ -38,14 +38,19 @@ export class HeaderComponent implements OnInit {
       }
     }
     const emailAddress = formTextField?.value as string;
-    if (this.validateEmail(emailAddress)) {
-      form?.submit();
-      form?.reset();
-      if (this.submitSettings.buttonClickAlertText) {
-        window.alert(this.submitSettings.buttonClickAlertText);
+    if (form && formTextField) {
+      // ensure form and field were found
+      if (this.validateEmail(emailAddress)) {
+        form?.submit();
+        form?.reset();
+        if (this.submitSettings.buttonClickAlertText) {
+          window.alert(this.submitSettings.buttonClickAlertText);
+        }
+      } else {
+        window.alert('Please enter a valid email address');
       }
     } else {
-      window.alert('Please enter a valid email address');
+      window.alert('Issue submitting email address; please contact admin');
     }
   }
 
