@@ -26,6 +26,7 @@ export class AppComponent {
   submitSettings = {
     target: 'http://192.168.1.170:8000/signup', // don't forget to rate-limit this server-side to avoid spam!
     buttonText: 'Sign up!',
+    buttonClickAlertText: 'Thanks for signing up!',
     textFieldCssWidth: '10',
   };
 }
