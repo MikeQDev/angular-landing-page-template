@@ -5,13 +5,14 @@
     [description]="headerDescription"
     [buttons]="headerButtons"
     [imageCss]="imageCss"
+    [belowButtonText]="belowButtonText"
   >
   </lp-header>
-
   <lp-header
-    [headline]="'center ' + headerHeadline"
+    [headline]="'center email ' + headerHeadline"
     [description]="headerDescription"
-    [buttons]="headerButtons"
+    belowButtonText="No spam - we promise!"
+    [submitSettings]="submitSettings"
   >
   </lp-header>
 </div>
