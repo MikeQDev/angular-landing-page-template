@@ -17,7 +17,6 @@
   </lp-header>
   <lp-dual-pane
     orientation="center"
-    [imageFirst]="false"
     [imageUrl]="dualPaneImageUrl"
     [headline]="'center ' + dualPaneheader"
     [description]="dualPaneDescription"
@@ -26,6 +25,7 @@
   </lp-dual-pane>
   <lp-dual-pane
     [imageUrl]="dualPaneImageUrl"
+    [imageFirst]="true"
     [headline]="dualPaneheader"
     [description]="dualPaneDescription"
     [buttons]="dualPaneButtons"

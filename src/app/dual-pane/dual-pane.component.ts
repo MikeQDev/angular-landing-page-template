@@ -12,7 +12,7 @@ export class DualPaneComponent {
   @Input() buttons: any;
   @Input() orientation = 'left'; // or, left
   @Input() imageUrl = '';
-  @Input() imageFirst = true; // or false
+  @Input() imageFirst = false; // or true
   @Input() imageOverflow = 'hidden'; // or visible
   @Input() imageWidth = 'auto';
   @Input() imageHeight = 'auto';
