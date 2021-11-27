@@ -1,0 +1,36 @@
+@use '/src/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container.imageFirst {
+  flex-direction: column-reverse;
+}
+
+.textBlock,
+.imageBlock {
+  padding: 25px;
+  border: 1px solid lightgray;
+}
+
+.imageBlock {
+  display: flex;
+  img {
+    margin: auto;
+    user-select: none;
+  }
+}
+
+@media (min-width: variables.$mobile-width) {
+  .container {
+    flex-direction: row;
+  }
+  .container.imageFirst {
+    flex-direction: row-reverse;
+  }
+  .textBlock,
+  .imageBlock {
+    width: 50%;
+  }
+}
