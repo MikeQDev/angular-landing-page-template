@@ -3,4 +3,9 @@
 .main-content {
   margin: 0 auto;
   max-width: variables.$mobile-width;
+
+  & > * {
+    display: block;
+    margin: 10px 0;
+  }
 }
