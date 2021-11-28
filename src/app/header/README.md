@@ -10,8 +10,6 @@
 
 `buttons`: array of `{text,href}` objects
 
-`headline`: string
-
 `imageCss`: image in form of CSS `background-image`, typically `'url(...)'` or `'none'`
 
 `belowButtonText`: faded text near bottom of component
