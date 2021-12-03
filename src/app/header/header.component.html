@@ -24,12 +24,6 @@
       </lp-button>
     </form>
   </div>
-  <div *ngIf="buttons?.length > 0" class="button-section">
-    <lp-button
-      *ngFor="let b of buttons"
-      [text]="b.text"
-      [href]="b.href"
-    ></lp-button>
-  </div>
+  <lp-button-group [buttons]="buttons"></lp-button-group>
   <p class="below-button-text">{{ belowButtonText }}</p>
 </div>

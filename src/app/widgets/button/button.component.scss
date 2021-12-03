@@ -1,18 +1,10 @@
-@use '/src/variables.scss';
-
 .button {
   margin: 2px 5px 2px 0;
   padding: 5px 20px;
   text-align: right;
   border-radius: 15px;
   text-decoration: none;
-  color: white;
-  background-color: variables.$primary-color;
+  color: black;
   display: inline-block;
   user-select: none;
-  // box-shadow: 0px 0px 7px variables.$lighter-color;
-}
-
-.button:hover {
-  background-color: variables.$shaded-color;
 }

@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   @HostBinding('class.displayImage') displayImage = false;
   @Input() headline = 'headline';
   @Input() description = 'description';
-  @Input() buttons: any; // TODO: secondary button color
+  @Input() buttons: any;
   @Input() imageCss = 'none';
   @Input() belowButtonText = '';
   @Input() submitSettings: any;

@@ -1,0 +1,7 @@
+<div *ngIf="buttons?.length > 0" class="f">
+  <lp-button
+    *ngFor="let b of buttons"
+    [text]="b.text"
+    [href]="b.href"
+  ></lp-button>
+</div>
