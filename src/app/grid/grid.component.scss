@@ -1,25 +1,34 @@
+@use '/src/variables.scss';
+:host {
+  padding: 10px 0;
+}
+
 .wrap {
   display: grid;
 }
 
 .title {
   margin: 5px;
+  color: variables.$primary-color;
 }
 
 .item {
   margin: 0 10px;
   .content-item-header {
     margin: 5px 0;
+    color: variables.$shaded-color;
   }
 
   .testimonial-text {
     margin: 10px 0 5px;
   }
   .testimonial-name {
-    font-weight: bold;
     margin: 0;
+    font-weight: bold;
+    color: variables.$shaded-color;
   }
   .testimonial-title {
     margin: 0 0 10px;
+    color: variables.$lighter-color;
   }
 }

@@ -2,12 +2,12 @@
 
 .container {
   padding: 5px 5px 20px;
-  border: 1px solid lightgray;
 }
 
 .headline-section {
   h1 {
     margin: 10px 0;
+    color: variables.$primary-color;
   }
 }
 
@@ -31,11 +31,22 @@ p.below-button-text {
   font-size: 12px;
   color: gray; // TODO: remove this for better contrast/Accessibility score
 }
+@media (min-width: (variables.$mobile-width)) {
+  .headline-section {
+    h1 {
+      font-size: 3vw;
+    }
+  }
+}
 
-// TODO: make mobile-first
 @media (min-width: variables.$mobile-width) {
   :host(.displayImage) {
     .container {
+      .headline-section {
+        h1 {
+          max-width: 70%;
+        }
+      }
       .description-section {
         max-width: 65%;
       }
