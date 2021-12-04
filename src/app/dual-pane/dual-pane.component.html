@@ -2,7 +2,13 @@
   <div class="textBlock" [ngStyle]="{ 'text-align': orientation }">
     <h1>{{ headline }}</h1>
     <p>{{ description }}</p>
-    <lp-button-group [buttons]="buttons"></lp-button-group>
+    <div *ngIf="buttons?.length > 0" class="button-section">
+      <lp-button
+        *ngFor="let b of buttons"
+        [text]="b.text"
+        [href]="b.href"
+      ></lp-button>
+    </div>
   </div>
   <div class="imageBlock" [ngStyle]="{ overflow: imageOverflow }">
     <img
