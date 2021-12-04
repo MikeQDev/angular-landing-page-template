@@ -20,7 +20,7 @@ export class GridComponent implements OnInit {
   ngOnInit(): void {
     this.resizeColumns();
     this.gridItems = this.content.items;
-    this.contentType = this.content.contentType || 'content';
+    this.contentType = this.content.contentType;
     this.title = this.content.title;
   }
 
