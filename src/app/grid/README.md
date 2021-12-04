@@ -14,11 +14,15 @@
 
 `items`: object containing `{header, description}`
 
+`title`: title above items; not required
+
 ### Testimonial Object
 
 `contentType`: string - `testimonial`
 
 `items`: object containing `{name, title, testimonial}`
+
+`title`: title above items; not required
 
 ## Sample HTML usage
 
