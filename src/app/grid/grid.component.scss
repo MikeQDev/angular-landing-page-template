@@ -1,0 +1,25 @@
+.wrap {
+  display: grid;
+}
+
+.title {
+  margin: 5px;
+}
+
+.item {
+  margin: 0 10px;
+  .content-item-header {
+    margin: 5px 0;
+  }
+
+  .testimonial-text {
+    margin: 10px 0 5px;
+  }
+  .testimonial-name {
+    font-weight: bold;
+    margin: 0;
+  }
+  .testimonial-title {
+    margin: 0 0 10px;
+  }
+}
