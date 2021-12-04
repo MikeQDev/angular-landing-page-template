@@ -33,7 +33,7 @@ export class GridComponent implements OnInit {
       this.columns = this.baseColumns;
     } else if (innerWidth >= this.mobileWidth - 600) {
       // a little less than mobile
-      this.columns = this.baseColumns - 1;
+      this.columns = Math.ceil(this.baseColumns / 2);
     } else {
       // mobile
       this.columns = 1;
