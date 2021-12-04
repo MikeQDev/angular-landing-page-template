@@ -11,7 +11,7 @@
       *ngFor="let item of gridItems"
       [ngStyle]="{ 'text-align': orientation }"
     >
-      <h2>{{ item.header }}</h2>
+      <h2 class="content-item-header">{{ item.header }}</h2>
       <p>{{ item.description }}</p>
     </div>
   </ng-container>
