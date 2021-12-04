@@ -9,8 +9,7 @@ export class AppComponent {
   title = 'landing-page';
 
   // Reusable variables for demo
-  imageUrl =
-    'https://images.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png';
+  imageUrl = 'https://i.stack.imgur.com/E4ke6.png';
   loremIpsum = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius accumsan
     diam et finibus. Ut bibendum urna ex, quis tempus urna semper ac. Vivamus ac
     mi non nunc eleifend sagittis vel ut dui. Etiam eleifend nunc augue. Nunc
