@@ -30,4 +30,14 @@
     [description]="dualPaneDescription"
     [buttons]="dualPaneButtons"
   ></lp-dual-pane>
+  <lp-grid
+    [content]="gridContent"
+    [baseColumns]="gridContent.items.length"
+  ></lp-grid>
+  <lp-grid
+    orientation="left"
+    type="testimonial"
+    [content]="testimonialContent"
+    [baseColumns]="testimonialContent.items.length"
+  ></lp-grid>
 </div>

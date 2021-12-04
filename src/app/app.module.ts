@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ButtonComponent } from './widgets/button/button.component';
 import { DualPaneComponent } from './dual-pane/dual-pane.component';
+import { GridComponent } from './grid/grid.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { DualPaneComponent } from './dual-pane/dual-pane.component';
     HeaderComponent,
     ButtonComponent,
     DualPaneComponent,
+    GridComponent,
   ],
   imports: [BrowserModule],
   providers: [],
