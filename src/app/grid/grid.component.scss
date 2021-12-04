@@ -1,4 +1,7 @@
 @use '/src/variables.scss';
+:host {
+  padding: 10px 0;
+}
 
 .wrap {
   display: grid;
