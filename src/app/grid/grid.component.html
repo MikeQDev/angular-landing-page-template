@@ -1,0 +1,29 @@
+<h1 class="title" [ngStyle]="{ 'text-align': orientation }">{{ title }}</h1>
+<div
+  class="wrap"
+  [ngStyle]="{
+    'grid-template-columns': 'repeat(' + columns + ', minmax(0, 1fr))'
+  }"
+>
+  <ng-container *ngIf="contentType === 'content'">
+    <div
+      class="item"
+      *ngFor="let item of gridItems"
+      [ngStyle]="{ 'text-align': orientation }"
+    >
+      <h2>{{ item.header }}</h2>
+      <p>{{ item.description }}</p>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="contentType === 'testimonial'">
+    <div
+      class="item"
+      *ngFor="let item of gridItems"
+      [ngStyle]="{ 'text-align': orientation }"
+    >
+      <p class="testimonial-text">{{ item.testimonial }}</p>
+      <p class="testimonial-name">{{ item.name }}</p>
+      <p class="testimonial-title">{{ item.title }}</p>
+    </div>
+  </ng-container>
+</div>
