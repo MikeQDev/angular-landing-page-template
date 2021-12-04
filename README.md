@@ -2,6 +2,17 @@
 
 Quickly generate landing pages based on premade components
 
+[View live demo](https://mikeqdev.github.io/angular-landing-page-template/)
+
+## Quick-start
+
+1. `npm install` to install dependencies
+2. Update `src/app/app.component.{html,ts}` to set up page content
+3. Update `src/variables.scss` to set color scheme and mobile-width
+4. Update `src/favicon.ico` to use a custom favicon
+5. `ng serve [--host 0.0.0.0]` to view page
+6. Deploy
+
 TODO: explore breaking out components into separate librraries, for easier versioning & updating
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
