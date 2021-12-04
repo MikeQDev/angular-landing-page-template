@@ -4,7 +4,7 @@
 
 `orientation`: orientation for text-align css value; defaults to `center`
 
-`baseColumns`: numeric value describing how many colums on desktop. Decreases by 1 when width shrinks, then to 1 on mobile. Defaults to `4`
+`baseColumns`: numeric value describing how many columns to display on desktop-width. Decreases by 1 when width shrinks, then to 1 on mobile. Defaults to `4`
 
 `content`: object containing `{contentType, title, items}`; see `Content Object` and `Testimonial Object` sections below
 
