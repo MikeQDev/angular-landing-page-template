@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { mobileWidth } from '../../variables';
 
 @Component({
   selector: 'lp-grid',
@@ -15,7 +16,6 @@ export class GridComponent implements OnInit {
   title = '';
 
   columns = 1; // default mobile columns
-  mobileWidth = 1366;
 
   ngOnInit(): void {
     this.resizeColumns();
@@ -28,10 +28,10 @@ export class GridComponent implements OnInit {
   resizeColumns() {
     // since we can't pass variables influenced by @media directly to CSS
     const innerWidth = window.innerWidth;
-    if (innerWidth > this.mobileWidth) {
+    if (innerWidth > mobileWidth) {
       // desktop
       this.columns = this.baseColumns;
-    } else if (innerWidth >= this.mobileWidth - 600) {
+    } else if (innerWidth >= mobileWidth - 600) {
       // a little less than mobile
       this.columns = Math.ceil(this.baseColumns / 2);
     } else {
