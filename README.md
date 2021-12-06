@@ -4,6 +4,8 @@ Quickly generate landing pages based on premade components
 
 [View live demo](https://mikeqdev.github.io/angular-landing-page-template/)
 
+![lighthouse results](lighthouse-results.jpg)
+
 ## Quick-start
 
 1. `npm install` to install dependencies
