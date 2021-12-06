@@ -29,7 +29,7 @@
 p.below-button-text {
   margin: 0;
   font-size: 12px;
-  color: gray; // TODO: remove this for better contrast/Accessibility score
+  color: #575757;
 }
 @media (min-width: (variables.$mobile-width)) {
   .headline-section {
