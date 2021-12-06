@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   @Input() orientation = 'center'; // or, left
   @HostBinding('class.displayImage') displayImage = false;
   @Input() headline = 'headline';
+  @Input() staticHeadlineSize = ''; // if you don't want to grow/shrink on desktop; 32px for h1
   @Input() description = 'description';
   @Input() buttons: any; // TODO: secondary button color
   @Input() imageCss = 'none';

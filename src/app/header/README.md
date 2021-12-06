@@ -6,6 +6,8 @@
 
 `headline`: string
 
+`staticHeadlineSize`: CSS value of headlines `font-size`, to avoid growing/shrinking on desktop devices
+
 `description`: string
 
 `buttons`: array of `{text,href}` objects
@@ -32,10 +34,11 @@
   </div>
   <div class="section-container">
     <lp-header
-      [headline]="'center email ' + headerHeadline"
-      [description]="headerDescription"
+      headline="What are you waiting for?"
+      description="Join now before times runs out"
       belowButtonText="No spam - we promise!"
       [submitSettings]="submitSettings"
+      staticHeadlineSize="32px"
     >
     </lp-header>
   </div>
