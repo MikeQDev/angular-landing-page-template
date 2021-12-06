@@ -20,7 +20,9 @@
 
 `imageHeight`: CSS value for image height; defaults to `auto`
 
-`imageTransform`: ; CSS transformation value, ie: `rotate(45deg)`; defaults to `none`
+`imageTransform`: CSS transformation value, ie: `rotate(45deg)`; defaults to `none`
+
+`imageAltText`: HTML img alt value
 
 ## Sample HTML usage
 
@@ -29,6 +31,7 @@
     <lp-dual-pane
       orientation="center"
       [imageUrl]="dualPaneImageUrl"
+      imageAltText="sample image"
       [headline]="'center ' + dualPaneheader"
       [description]="dualPaneDescription"
       imageTransform="rotate(15deg)"
@@ -37,6 +40,7 @@
   <div class="section-container">
     <lp-dual-pane
       [imageUrl]="dualPaneImageUrl"
+      imageAltText="sample image"
       [imageFirst]="true"
       [headline]="dualPaneheader"
       [description]="dualPaneDescription"

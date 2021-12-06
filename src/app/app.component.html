@@ -14,19 +14,21 @@
     <lp-dual-pane
       orientation="center"
       [imageUrl]="dualPaneImageUrl"
+      [imageFirst]="true"
       [headline]="'center ' + dualPaneheader"
       [description]="dualPaneDescription"
       imageTransform="rotate(15deg)"
+      imageAltText="sample image"
     >
     </lp-dual-pane>
   </div>
   <div class="section-container">
     <lp-dual-pane
       [imageUrl]="dualPaneImageUrl"
-      [imageFirst]="true"
       [headline]="dualPaneheader"
       [description]="dualPaneDescription"
       [buttons]="dualPaneButtons"
+      imageAltText="sample image"
     ></lp-dual-pane>
   </div>
   <div class="section-container">
