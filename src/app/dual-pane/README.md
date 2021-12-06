@@ -35,6 +35,7 @@
       [headline]="'center ' + dualPaneheader"
       [description]="dualPaneDescription"
       imageTransform="rotate(15deg)"
+      imageOverflow="visible"
     ></lp-dual-pane>
   </div>
   <div class="section-container">
