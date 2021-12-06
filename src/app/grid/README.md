@@ -27,9 +27,13 @@
 ## Sample HTML usage
 
 ```
-  <lp-grid [content]="gridContent" [baseColumns]="gridContent.items.length"></lp-grid>
-  <lp-grid orientation="left" type="testimonial" [content]="testimonialContent"
-    [baseColumns]="testimonialContent.items.length"></lp-grid>
+  <div class="section-container">
+    <lp-grid [content]="gridContent" [baseColumns]="gridContent.items.length"></lp-grid>
+  </div>
+  <div class="section-container">
+    <lp-grid orientation="left" type="testimonial" [content]="testimonialContent"
+      [baseColumns]="testimonialContent.items.length"></lp-grid>
+  </div>
 ```
 
 ## Sample TS config

@@ -25,21 +25,24 @@
 ## Sample HTML usage
 
 ```
-  <lp-dual-pane
-    orientation="center"
-    [imageUrl]="dualPaneImageUrl"
-    [headline]="'center ' + dualPaneheader"
-    [description]="dualPaneDescription"
-    imageTransform="rotate(15deg)"
-  >
-  </lp-dual-pane>
-  <lp-dual-pane
-    [imageUrl]="dualPaneImageUrl"
-    [imageFirst]="true"
-    [headline]="dualPaneheader"
-    [description]="dualPaneDescription"
-    [buttons]="dualPaneButtons"
-  ></lp-dual-pane>
+  <div class="section-container">
+    <lp-dual-pane
+      orientation="center"
+      [imageUrl]="dualPaneImageUrl"
+      [headline]="'center ' + dualPaneheader"
+      [description]="dualPaneDescription"
+      imageTransform="rotate(15deg)"
+    ></lp-dual-pane>
+  </div>
+  <div class="section-container">
+    <lp-dual-pane
+      [imageUrl]="dualPaneImageUrl"
+      [imageFirst]="true"
+      [headline]="dualPaneheader"
+      [description]="dualPaneDescription"
+      [buttons]="dualPaneButtons"
+    ></lp-dual-pane>
+  </div>
 ```
 
 ## Sample TS config

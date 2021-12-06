@@ -2,11 +2,18 @@
 
 .main-content {
   margin: 0 auto;
-  max-width: variables.$mobile-width;
 
-  & > * {
+  & > .section-container > * {
     display: block;
     margin: 10px 0;
-    border: 1px solid lightgray;
+    max-width: variables.$mobile-width;
+    margin: auto;
+  }
+
+  & > *:nth-child(even) {
+    background-color: variables.$even-color;
+  }
+  & > *:nth-child(odd) {
+    background-color: variables.$odd-color;
   }
 }
