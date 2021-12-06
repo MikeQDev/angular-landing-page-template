@@ -1,7 +1,4 @@
 @use '/src/variables.scss';
-:host {
-  padding: 10px 0;
-}
 
 .wrap {
   display: grid;
@@ -23,12 +20,12 @@
     padding: 10px 0 5px;
   }
   .testimonial-name {
-    padding: 0;
+    margin: 0;
     font-weight: bold;
     color: variables.$shaded-color;
   }
   .testimonial-title {
-    padding: 0 0 10px;
+    margin: 0;
     color: variables.$lighter-color;
   }
 }

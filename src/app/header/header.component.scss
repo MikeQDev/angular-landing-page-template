@@ -1,9 +1,5 @@
 @use '/src/variables.scss';
 
-.container {
-  padding: 5px 5px 20px;
-}
-
 .headline-section {
   h1 {
     margin: 10px 0;
@@ -48,7 +44,7 @@ p.below-button-text {
         }
       }
       .description-section {
-        max-width: 65%;
+        max-width: 45%;
       }
       background-repeat: no-repeat;
       background-position-x: right;
