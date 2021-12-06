@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'landing-page';
 
   // Reusable variables for demo
-  imageUrl = 'https://i.stack.imgur.com/E4ke6.png';
+  imageUrl = 'assets/sample-image.jpg'; // or https://i.stack.imgur.com/E4ke6.png
   loremIpsum = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius accumsan
     diam et finibus. Ut bibendum urna ex, quis tempus urna semper ac. Vivamus ac
     mi non nunc eleifend sagittis vel ut dui.`;
