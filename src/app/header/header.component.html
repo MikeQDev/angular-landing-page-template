@@ -3,7 +3,7 @@
   [ngStyle]="{ 'background-image': imageCss, 'text-align': orientation }"
 >
   <div class="headline-section">
-    <h1>{{ headline }}</h1>
+    <h1 [ngStyle]="{ 'font-size': staticHeadlineSize }">{{ headline }}</h1>
   </div>
   <div class="description-section">
     <p>{{ description }}</p>

@@ -20,26 +20,34 @@
 
 `imageHeight`: CSS value for image height; defaults to `auto`
 
-`imageTransform`: ; CSS transformation value, ie: `rotate(45deg)`; defaults to `none`
+`imageTransform`: CSS transformation value, ie: `rotate(45deg)`; defaults to `none`
+
+`imageAltText`: HTML img alt value
 
 ## Sample HTML usage
 
 ```
-  <lp-dual-pane
-    orientation="center"
-    [imageUrl]="dualPaneImageUrl"
-    [headline]="'center ' + dualPaneheader"
-    [description]="dualPaneDescription"
-    imageTransform="rotate(15deg)"
-  >
-  </lp-dual-pane>
-  <lp-dual-pane
-    [imageUrl]="dualPaneImageUrl"
-    [imageFirst]="true"
-    [headline]="dualPaneheader"
-    [description]="dualPaneDescription"
-    [buttons]="dualPaneButtons"
-  ></lp-dual-pane>
+  <div class="section-container">
+    <lp-dual-pane
+      orientation="center"
+      [imageUrl]="dualPaneImageUrl"
+      imageAltText="sample image"
+      [headline]="'center ' + dualPaneheader"
+      [description]="dualPaneDescription"
+      imageTransform="rotate(15deg)"
+      imageOverflow="visible"
+    ></lp-dual-pane>
+  </div>
+  <div class="section-container">
+    <lp-dual-pane
+      [imageUrl]="dualPaneImageUrl"
+      imageAltText="sample image"
+      [imageFirst]="true"
+      [headline]="dualPaneheader"
+      [description]="dualPaneDescription"
+      [buttons]="dualPaneButtons"
+    ></lp-dual-pane>
+  </div>
 ```
 
 ## Sample TS config

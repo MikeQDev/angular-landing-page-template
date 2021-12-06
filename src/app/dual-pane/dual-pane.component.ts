@@ -17,4 +17,5 @@ export class DualPaneComponent {
   @Input() imageWidth = 'auto';
   @Input() imageHeight = 'auto';
   @Input() imageTransform = 'none'; // or rotate(45deg);
+  @Input() imageAltText = '';
 }

@@ -1,43 +1,59 @@
 <div class="main-content">
-  <lp-header
-    orientation="left"
-    [headline]="'left ' + headerHeadline"
-    [description]="headerDescription"
-    [buttons]="headerButtons"
-    [imageCss]="imageCss"
-    [belowButtonText]="belowButtonText"
-  >
-  </lp-header>
-  <lp-header
-    [headline]="'center email ' + headerHeadline"
-    [description]="headerDescription"
-    belowButtonText="No spam - we promise!"
-    [submitSettings]="submitSettings"
-  >
-  </lp-header>
-  <lp-dual-pane
-    orientation="center"
-    [imageUrl]="dualPaneImageUrl"
-    [headline]="'center ' + dualPaneheader"
-    [description]="dualPaneDescription"
-    imageTransform="rotate(15deg)"
-  >
-  </lp-dual-pane>
-  <lp-dual-pane
-    [imageUrl]="dualPaneImageUrl"
-    [imageFirst]="true"
-    [headline]="dualPaneheader"
-    [description]="dualPaneDescription"
-    [buttons]="dualPaneButtons"
-  ></lp-dual-pane>
-  <lp-grid
-    [content]="gridContent"
-    [baseColumns]="gridContent.items.length"
-  ></lp-grid>
-  <lp-grid
-    orientation="left"
-    type="testimonial"
-    [content]="testimonialContent"
-    [baseColumns]="testimonialContent.items.length"
-  ></lp-grid>
+  <div class="section-container">
+    <lp-header
+      orientation="left"
+      [headline]="headerHeadline"
+      [description]="headerDescription"
+      [buttons]="headerButtons"
+      [imageCss]="imageCss"
+      [belowButtonText]="belowButtonText"
+    >
+    </lp-header>
+  </div>
+  <div class="section-container">
+    <lp-dual-pane
+      orientation="center"
+      [imageUrl]="dualPaneImageUrl"
+      [imageFirst]="true"
+      [headline]="'center ' + dualPaneheader"
+      [description]="dualPaneDescription"
+      imageTransform="rotate(15deg)"
+      imageOverflow="visible"
+      imageAltText="sample image"
+    >
+    </lp-dual-pane>
+  </div>
+  <div class="section-container">
+    <lp-dual-pane
+      [imageUrl]="dualPaneImageUrl"
+      [headline]="dualPaneheader"
+      [description]="dualPaneDescription"
+      [buttons]="dualPaneButtons"
+      imageAltText="sample image"
+    ></lp-dual-pane>
+  </div>
+  <div class="section-container">
+    <lp-grid
+      [content]="gridContent"
+      [baseColumns]="gridContent.items.length"
+    ></lp-grid>
+  </div>
+  <div class="section-container">
+    <lp-grid
+      orientation="left"
+      type="testimonial"
+      [content]="testimonialContent"
+      [baseColumns]="testimonialContent.items.length"
+    ></lp-grid>
+  </div>
+  <div class="section-container">
+    <lp-header
+      headline="What are you waiting for?"
+      description="Join now before times runs out"
+      belowButtonText="No spam - we promise!"
+      [submitSettings]="submitSettings"
+      staticHeadlineSize="32px"
+    >
+    </lp-header>
+  </div>
 </div>

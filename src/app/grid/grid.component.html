@@ -12,7 +12,7 @@
       [ngStyle]="{ 'text-align': orientation }"
     >
       <h2 class="content-item-header">{{ item.header }}</h2>
-      <p>{{ item.description }}</p>
+      <p class="content-item-description">{{ item.description }}</p>
     </div>
   </ng-container>
   <ng-container *ngIf="contentType === 'testimonial'">

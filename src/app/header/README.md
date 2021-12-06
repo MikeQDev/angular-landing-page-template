@@ -6,6 +6,8 @@
 
 `headline`: string
 
+`staticHeadlineSize`: CSS value of headlines `font-size`, to avoid growing/shrinking on desktop devices
+
 `description`: string
 
 `buttons`: array of `{text,href}` objects
@@ -19,27 +21,27 @@
 ## Sample HTML usage
 
 ```
-<div class="container" [ngStyle]="{ 'background-image': imageCss, 'text-align': orientation }">
-  <div class="headline-section">
-    <h1>{{ headline }}</h1>
+  <div class="section-container">
+    <lp-header
+      orientation="left"
+      [headline]="'left ' + headerHeadline"
+      [description]="headerDescription"
+      [buttons]="headerButtons"
+      [imageCss]="imageCss"
+      [belowButtonText]="belowButtonText"
+    >
+    </lp-header>
   </div>
-  <div class="description-section">
-    <p>{{ description }}</p>
+  <div class="section-container">
+    <lp-header
+      headline="What are you waiting for?"
+      description="Join now before times runs out"
+      belowButtonText="No spam - we promise!"
+      [submitSettings]="submitSettings"
+      staticHeadlineSize="32px"
+    >
+    </lp-header>
   </div>
-  <div *ngIf="submitSettings" class="email-section">
-    <iframe name="noRedirect" id="noRedirect" style="display: none"></iframe>
-    <form [action]="submitSettings.target" method="POST" target="noRedirect">
-      <input type="text" name="emailAddress" placeholder="Enter email"
-        [size]="submitSettings.textFieldCssWidth || 10" />
-      <lp-button [text]="submitSettings.buttonText" (click)="performSubmit($event)">
-      </lp-button>
-    </form>
-  </div>
-  <div *ngIf="buttons?.length > 0" class="button-section">
-    <lp-button *ngFor="let b of buttons" [text]="b.text" [href]="b.href"></lp-button>
-  </div>
-  <p class="below-button-text">{{ belowButtonText }}</p>
-</div>
 ```
 
 ## Sample TS config
