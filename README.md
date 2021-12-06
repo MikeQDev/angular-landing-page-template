@@ -1,4 +1,4 @@
-# LandingPage
+# Angular Landing Page Template
 
 Quickly generate landing pages based on premade components
 
