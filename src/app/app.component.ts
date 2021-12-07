@@ -87,4 +87,27 @@ export class AppComponent {
       },
     ],
   };
+
+  stepContent = {
+    contentType: 'content',
+    title: 'Get started in 4 easy steps:',
+    items: [
+      {
+        header: '1',
+        description: 'Fork this repo',
+      },
+      {
+        header: '2',
+        description: 'Add your copy to config files',
+      },
+      {
+        header: '3',
+        description: 'Deploy',
+      },
+      {
+        header: '4',
+        description: 'Market',
+      },
+    ],
+  };
 }

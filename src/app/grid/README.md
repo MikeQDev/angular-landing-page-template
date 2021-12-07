@@ -4,6 +4,8 @@
 
 `orientation`: orientation for text-align css value; defaults to `center`
 
+`bordered`: display vertical separators between items on non-mobile devices when set to `true`; defaults to `false`
+
 `baseColumns`: numeric value describing how many columns to display on desktop-width. Decreases by 1 when width shrinks, then to 1 on mobile. Defaults to `4`
 
 `content`: object containing `{contentType, title, items}`; see `Content Object` and `Testimonial Object` sections below
@@ -33,6 +35,9 @@
   <div class="section-container">
     <lp-grid orientation="left" type="testimonial" [content]="testimonialContent"
       [baseColumns]="testimonialContent.items.length"></lp-grid>
+  </div>
+  <div class="section-container">
+    <lp-grid [content]="stepContent" [bordered]="true" [baseColumns]="stepContent.items.length"></lp-grid>
   </div>
 ```
 
@@ -82,6 +87,28 @@
         name: 'Person C',
         title: "Person's title",
         testimonial: 'Sed a porta nisl. Aenean egestas leo lectus, quis tempus urna eleifend et. Vestibulum enim turpis, ultricies ut laoreet quis, placerat eu enim. Curabitur at aliquet mauris.',
+      },
+    ],
+  };
+    stepContent = {
+    contentType: 'content',
+    title: 'Get started in 4 easy steps:',
+    items: [
+      {
+        header: '1',
+        description: 'Fork this repo',
+      },
+      {
+        header: '2',
+        description: 'Add your copy to config files',
+      },
+      {
+        header: '3',
+        description: 'Deploy',
+      },
+      {
+        header: '4',
+        description: 'Market',
       },
     ],
   };

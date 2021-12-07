@@ -33,3 +33,12 @@
     color: variables.$lighter-color;
   }
 }
+
+@media (min-width: variables.$mobile-width) {
+  .item.bordered {
+    border-right: 1px solid variables.$primary-color;
+  }
+  .item.bordered:last-child {
+    border: 0;
+  }
+}

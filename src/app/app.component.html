@@ -11,6 +11,13 @@
     </lp-header>
   </div>
   <div class="section-container">
+    <lp-grid
+      [content]="stepContent"
+      [bordered]="true"
+      [baseColumns]="stepContent.items.length"
+    ></lp-grid>
+  </div>
+  <div class="section-container">
     <lp-dual-pane
       orientation="center"
       [imageUrl]="dualPaneImageUrl"

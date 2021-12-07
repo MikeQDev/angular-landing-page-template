@@ -9,6 +9,7 @@ import { mobileWidth } from '../../variables';
 })
 export class GridComponent implements OnInit {
   @Input() baseColumns = 4; // for desktop use
+  @Input() bordered = false; // vertical borders separating items
   @Input() orientation = 'center'; // or left
   @Input() content: any;
   contentType: any;

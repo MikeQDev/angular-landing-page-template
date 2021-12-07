@@ -8,6 +8,7 @@
   <ng-container *ngIf="contentType === 'content'">
     <div
       class="item"
+      [ngClass]="{ bordered }"
       *ngFor="let item of gridItems"
       [ngStyle]="{ 'text-align': orientation }"
     >
@@ -18,6 +19,7 @@
   <ng-container *ngIf="contentType === 'testimonial'">
     <div
       class="item"
+      [ngClass]="{ bordered }"
       *ngFor="let item of gridItems"
       [ngStyle]="{ 'text-align': orientation }"
     >
