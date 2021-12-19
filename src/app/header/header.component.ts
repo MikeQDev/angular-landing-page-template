@@ -8,7 +8,7 @@ import { Component, HostBinding, Input } from '@angular/core';
 })
 export class HeaderComponent {
   @Input() orientation = 'center'; // or, left
-  @Input() @HostBinding('class.imageHideOnMobile') imageHideOnMobile = true;
+  @Input() @HostBinding('class.image-hide-on-mobile') imageHideOnMobile = true;
   @Input() headline = 'headline';
   @Input() staticHeadlineSize = ''; // if you don't want to grow/shrink on desktop; 32px for h1
   @Input() description = 'description';
