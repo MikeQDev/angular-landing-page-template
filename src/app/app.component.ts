@@ -20,7 +20,6 @@ export class AppComponent {
 
   // header
   headerHeadline = 'Angular Landing Page Template';
-  imageCss = `url('${this.imageUrl}')`;
   headerDescription = this.loremIpsum;
   headerButtons = this.buttons;
   belowButtonText = 'No credit card required.';

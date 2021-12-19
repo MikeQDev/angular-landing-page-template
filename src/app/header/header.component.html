@@ -1,35 +1,57 @@
 <div
   class="container"
-  [ngStyle]="{ 'background-image': imageCss, 'text-align': orientation }"
+  [ngStyle]="{ 'text-align': orientation }"
+  [ngClass]="{ 'two-pane': orientation !== 'center' }"
 >
-  <div class="headline-section">
-    <h1 [ngStyle]="{ 'font-size': staticHeadlineSize }">{{ headline }}</h1>
+  <div class="description-block">
+    <div class="description">
+      <div class="headline-section">
+        <h1 [ngStyle]="{ 'font-size': staticHeadlineSize }">{{ headline }}</h1>
+      </div>
+      <div class="description-section">
+        <p>{{ description }}</p>
+      </div>
+      <div *ngIf="submitSettings" class="email-section">
+        <iframe
+          name="noRedirect"
+          id="noRedirect"
+          style="display: none"
+        ></iframe>
+        <form
+          [action]="submitSettings.target"
+          method="POST"
+          target="noRedirect"
+        >
+          <input
+            type="text"
+            name="emailAddress"
+            placeholder="Enter email"
+            [size]="submitSettings.textFieldCssWidth || 10"
+          />
+          <lp-button
+            [text]="submitSettings.buttonText"
+            (click)="performSubmit($event)"
+          >
+          </lp-button>
+        </form>
+      </div>
+      <div *ngIf="buttons?.length > 0" class="button-section">
+        <lp-button
+          *ngFor="let b of buttons"
+          [text]="b.text"
+          [href]="b.href"
+        ></lp-button>
+      </div>
+      <p class="below-button-text">{{ belowButtonText }}</p>
+    </div>
   </div>
-  <div class="description-section">
-    <p>{{ description }}</p>
+  <div *ngIf="orientation !== 'center'" class="image-block">
+    <img
+      [ngStyle]="{
+        transform: imageTransform
+      }"
+      [src]="imageUrl"
+      [alt]="imageAltText"
+    />
   </div>
-  <div *ngIf="submitSettings" class="email-section">
-    <iframe name="noRedirect" id="noRedirect" style="display: none"></iframe>
-    <form [action]="submitSettings.target" method="POST" target="noRedirect">
-      <input
-        type="text"
-        name="emailAddress"
-        placeholder="Enter email"
-        [size]="submitSettings.textFieldCssWidth || 10"
-      />
-      <lp-button
-        [text]="submitSettings.buttonText"
-        (click)="performSubmit($event)"
-      >
-      </lp-button>
-    </form>
-  </div>
-  <div *ngIf="buttons?.length > 0" class="button-section">
-    <lp-button
-      *ngFor="let b of buttons"
-      [text]="b.text"
-      [href]="b.href"
-    ></lp-button>
-  </div>
-  <p class="below-button-text">{{ belowButtonText }}</p>
 </div>
