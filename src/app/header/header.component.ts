@@ -1,24 +1,24 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Component, HostBinding, Input, OnInit } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 
 @Component({
   selector: 'lp-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   @Input() orientation = 'center'; // or, left
-  @HostBinding('class.displayImage') displayImage = false;
+  @Input() @HostBinding('class.imageHideOnMobile') imageHideOnMobile = true;
   @Input() headline = 'headline';
   @Input() staticHeadlineSize = ''; // if you don't want to grow/shrink on desktop; 32px for h1
   @Input() description = 'description';
   @Input() buttons: any; // TODO: secondary button color
-  @Input() imageCss = 'none';
+  @Input() imageUrl = '';
+  @Input() imageWidth = '15vw';
+  @Input() imageTransform = 'none'; // or rotate(45deg);
+  @Input() imageAltText = '';
   @Input() belowButtonText = '';
   @Input() submitSettings: any;
-  ngOnInit(): void {
-    this.displayImage = this.orientation !== 'center';
-  }
 
   performSubmit(event: any): void {
     // TODO: consider using angular (reactive) form. Just be aware of bundle size increase...

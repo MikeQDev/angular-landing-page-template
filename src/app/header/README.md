@@ -12,7 +12,15 @@
 
 `buttons`: array of `{text,href}` objects
 
-`imageCss`: image in form of CSS `background-image`, typically `'url(...)'` or `'none'`
+`imageUrl`: URL of image to display
+
+`imageHideOnMobile`: boolean to hide image on mobile, so user can get right to the content; defaults to `true`
+
+`imageWidth`: CSS value for image width; defaults to `15vw`
+
+`imageTransform`: CSS transformation value, ie: `rotate(45deg)`; defaults to `none`
+
+`imageAltText`: HTML img alt value
 
 `belowButtonText`: faded text near bottom of component
 
@@ -24,12 +32,12 @@
   <div class="section-container">
     <lp-header
       orientation="left"
-      [headline]="'left ' + headerHeadline"
+      [headline]="headerHeadline"
       [description]="headerDescription"
       [buttons]="headerButtons"
-      [imageCss]="imageCss"
+      [imageUrl]="dualPaneImageUrl"
       [belowButtonText]="belowButtonText"
-    >
+      [imageHideOnMobile]="false">
     </lp-header>
   </div>
   <div class="section-container">
@@ -38,8 +46,7 @@
       description="Join now before times runs out"
       belowButtonText="No spam - we promise!"
       [submitSettings]="submitSettings"
-      staticHeadlineSize="32px"
-    >
+      staticHeadlineSize="32px">
     </lp-header>
   </div>
 ```
