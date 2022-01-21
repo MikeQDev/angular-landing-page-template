@@ -17,4 +17,9 @@
   & > *:nth-child(odd) {
     background-color: variables.$odd-color;
   }
+  @media (min-width: (variables.$mobile-width - 400)) {
+    & > *:first-child {
+      padding-top: 30px;
+    }
+  }
 }
