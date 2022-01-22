@@ -11,7 +11,7 @@ export class HeaderComponent {
   @Input() @HostBinding('class.image-hide-on-mobile') imageHideOnMobile = true;
   @Input() headline = 'headline';
   @Input() staticHeadlineSize = ''; // if you don't want to grow/shrink on desktop; 32px for h1
-  @Input() description = 'description';
+  @Input() description = '';
   @Input() buttons: any; // TODO: secondary button color
   @Input() imageUrl = '';
   @Input() imageWidth = '15vw';

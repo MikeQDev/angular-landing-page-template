@@ -8,7 +8,7 @@
       <div class="headline-section">
         <h1 [ngStyle]="{ 'font-size': staticHeadlineSize }">{{ headline }}</h1>
       </div>
-      <div class="description-section">
+      <div *ngIf="description !== ''" class="description-section">
         <p>{{ description }}</p>
       </div>
       <div *ngIf="submitSettings" class="email-section">
