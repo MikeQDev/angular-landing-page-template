@@ -2,15 +2,16 @@
   <div class="section-container">
     <lp-header
       orientation="left"
-      headline="Angular Landing Page Template
-"
-      description="Create beautiful, custom HTML/typescript landing pages with Angular"
-      [buttons]="[
-        { text: 'buttonA', href: 'https://google.com' },
-        { text: 'buttonB', href: 'https://google.com' }
-      ]"
-      imageUrl="assets/sample-image.jpg"
-      belowButtonText="No credit card required"
+      headline="Create beautiful songs in no time"
+      description="Top composers already crafted the perfect instrumentals. Release your next hit quickly by singing over backing tracks everyone loves."
+      [submitSettings]="{
+        target: 'https://192.168.1.170:8000/signup',
+        buttonText: 'Upgrade my music',
+        buttonClickAlertText: '(This would redirect to the actual app)',
+        textFieldCssWidth: '10'
+      }"
+      imageUrl="assets/waves.png"
+      belowButtonText="Free. Forever."
       [imageHideOnMobile]="false"
     >
     </lp-header>
@@ -23,19 +24,19 @@
         items: [
           {
             header: '1',
-            description: 'Fork this repo'
+            description: 'Paste YouTube link'
           },
           {
             header: '2',
-            description: 'Add your copy to config files'
+            description: 'We extract the backing track for you'
           },
           {
             header: '3',
-            description: 'Deploy'
+            description: 'Download the mp3 file for free'
           },
           {
             header: '4',
-            description: 'Market'
+            description: 'Sing!'
           }
         ]
       }"
@@ -45,102 +46,31 @@
   </div>
   <div class="section-container">
     <lp-dual-pane
-      orientation="center"
-      imageUrl="assets/sample-image.jpg"
+      imageUrl="assets/cheering.png"
+      headline="Save time and money producing your next song"
+      description="Making music is time-consuming and expensive. VoiceBegone eliminates the lengthy process of developing backing tracks, so you can share your message with the world quickly and effectively."
+      imageAltText="crowd cheering"
+    ></lp-dual-pane>
+  </div>
+  <div class="section-container">
+    <lp-dual-pane
+      imageUrl="assets/music-heart.png"
+      headline="Always free and available"
+      description="Other music extraction services are either too expensive or get shut down after some time. Not us - we've got your back."
+      imageAltText="music heart"
       [imageFirst]="true"
-      headline="center Dual-pane header
-"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius accumsan diam et finibus. Ut bibendum urna ex, quis tempus urna semper ac. Vivamus ac mi non nunc eleifend sagittis vel ut dui.
-
-"
-      imageTransform="rotate(15deg)"
-      imageOverflow="visible"
-      imageAltText="sample image"
     >
     </lp-dual-pane>
   </div>
   <div class="section-container">
-    <lp-dual-pane
-      imageUrl="assets/sample-image.jpg"
-      headline="Dual-pane header"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius accumsan diam et finibus. Ut bibendum urna ex, quis tempus urna semper ac. Vivamus ac mi non nunc eleifend sagittis vel ut dui."
-      [buttons]="[
-        { text: 'buttonA', href: 'https://google.com' },
-        { text: 'buttonB', href: 'https://google.com' }
-      ]"
-      imageAltText="sample image"
-    ></lp-dual-pane>
-  </div>
-  <div class="section-container">
-    <lp-grid
-      [content]="{
-        contentType: 'content',
-        items: [
-          {
-            header: 'xyz',
-            description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula felis nibh, vitae elementum eros bibendum ac. Nam sit amet quam urna. Morbi diam orci, varius eu consequat ut, semper eu urna. Praesent id lacus neque. Sed a porta nisl. Aenean egestas leo lectus, quis tempus urna eleifend et. Vestibulum enim turpis, ultricies ut laoreet quis, placerat eu enim. Curabitur at aliquet mauris.'
-          },
-          {
-            header: 'xyz',
-            description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula felis nibh, vitae elementum eros bibendum ac. Nam sit amet quam urna. Morbi diam orci, varius eu consequat ut, semper eu urna. Praesent id lacus neque. Sed a porta nisl. Aenean egestas leo lectus, quis tempus urna eleifend et. Vestibulum enim turpis, ultricies ut laoreet quis, placerat eu enim. Curabitur at aliquet mauris.'
-          },
-          {
-            header: 'xyz',
-            description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula felis nibh, vitae elementum eros bibendum ac. Nam sit amet quam urna. Morbi diam orci, varius eu consequat ut, semper eu urna. Praesent id lacus neque. Sed a porta nisl. Aenean egestas leo lectus, quis tempus urna eleifend et. Vestibulum enim turpis, ultricies ut laoreet quis, placerat eu enim. Curabitur at aliquet mauris.'
-          },
-          {
-            header: 'xyz',
-            description:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula felis nibh, vitae elementum eros bibendum ac. Nam sit amet quam urna. Morbi diam orci, varius eu consequat ut, semper eu urna. Praesent id lacus neque. Sed a porta nisl. Aenean egestas leo lectus, quis tempus urna eleifend et. Vestibulum enim turpis, ultricies ut laoreet quis, placerat eu enim. Curabitur at aliquet mauris.'
-          }
-        ]
-      }"
-      [baseColumns]="4"
-    ></lp-grid>
-  </div>
-  <div class="section-container">
-    <lp-grid
-      orientation="left"
-      type="testimonial"
-      [content]="{
-        contentType: 'testimonial',
-        title: 'What people are saying',
-        items: [
-          {
-            name: 'Person A',
-            title: 'Person\'s title',
-            testimonial:
-              'Sed a porta nisl. Aenean egestas leo lectus, quis tempus urna eleifend et. Vestibulum enim turpis, ultricies ut laoreet quis, placerat eu enim. Curabitur at aliquet mauris.'
-          },
-          {
-            name: 'Person B',
-            title: 'Person\'s title',
-            testimonial:
-              'Sed a porta nisl. Aenean egestas leo lectus, quis tempus urna eleifend et. Vestibulum enim turpis, ultricies ut laoreet quis, placerat eu enim. Curabitur at aliquet mauris.'
-          },
-          {
-            name: 'Person C',
-            title: 'Person\'s title',
-            testimonial:
-              'Sed a porta nisl. Aenean egestas leo lectus, quis tempus urna eleifend et. Vestibulum enim turpis, ultricies ut laoreet quis, placerat eu enim. Curabitur at aliquet mauris.'
-          }
-        ]
-      }"
-      [baseColumns]="3"
-    ></lp-grid>
-  </div>
-  <div class="section-container">
     <lp-header
       headline="What are you waiting for?"
-      description="Get it now before times runs out"
-      belowButtonText="No spam - we promise!"
+      belowButtonText="&nbsp;"
+      description="Your fans are waiting!"
       [submitSettings]="{
         target: 'https://192.168.1.170:8000/signup',
-        buttonText: 'Sign up!',
-        buttonClickAlertText: 'Thanks for signing up!',
+        buttonText: 'Enter Now',
+        buttonClickAlertText: '(This would redirect to the actual app)',
         textFieldCssWidth: '10'
       }"
       staticHeadlineSize="32px"
