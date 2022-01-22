@@ -2,29 +2,57 @@
   <div class="section-container">
     <lp-header
       orientation="left"
-      [headline]="headerHeadline"
-      [description]="headerDescription"
-      [buttons]="headerButtons"
-      [imageUrl]="dualPaneImageUrl"
-      [belowButtonText]="belowButtonText"
+      headline="Angular Landing Page Template
+"
+      description="Create beautiful, custom HTML/typescript landing pages with Angular"
+      [buttons]="[
+        { text: 'buttonA', href: 'https://google.com' },
+        { text: 'buttonB', href: 'https://google.com' }
+      ]"
+      imageUrl="assets/sample-image.jpg"
+      belowButtonText="No credit card required"
       [imageHideOnMobile]="false"
     >
     </lp-header>
   </div>
   <div class="section-container">
     <lp-grid
-      [content]="stepContent"
+      [content]="{
+        contentType: 'content',
+        title: 'Get started in 4 easy steps:',
+        items: [
+          {
+            header: '1',
+            description: 'Fork this repo'
+          },
+          {
+            header: '2',
+            description: 'Add your copy to config files'
+          },
+          {
+            header: '3',
+            description: 'Deploy'
+          },
+          {
+            header: '4',
+            description: 'Market'
+          }
+        ]
+      }"
       [bordered]="true"
-      [baseColumns]="stepContent.items.length"
+      [baseColumns]="4"
     ></lp-grid>
   </div>
   <div class="section-container">
     <lp-dual-pane
       orientation="center"
-      [imageUrl]="dualPaneImageUrl"
+      imageUrl="assets/sample-image.jpg"
       [imageFirst]="true"
-      [headline]="'center ' + dualPaneheader"
-      [description]="dualPaneDescription"
+      headline="center Dual-pane header
+"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius accumsan diam et finibus. Ut bibendum urna ex, quis tempus urna semper ac. Vivamus ac mi non nunc eleifend sagittis vel ut dui.
+
+"
       imageTransform="rotate(15deg)"
       imageOverflow="visible"
       imageAltText="sample image"
@@ -33,33 +61,88 @@
   </div>
   <div class="section-container">
     <lp-dual-pane
-      [imageUrl]="dualPaneImageUrl"
-      [headline]="dualPaneheader"
-      [description]="dualPaneDescription"
-      [buttons]="dualPaneButtons"
+      imageUrl="assets/sample-image.jpg"
+      headline="Dual-pane header"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius accumsan diam et finibus. Ut bibendum urna ex, quis tempus urna semper ac. Vivamus ac mi non nunc eleifend sagittis vel ut dui."
+      [buttons]="[
+        { text: 'buttonA', href: 'https://google.com' },
+        { text: 'buttonB', href: 'https://google.com' }
+      ]"
       imageAltText="sample image"
     ></lp-dual-pane>
   </div>
   <div class="section-container">
     <lp-grid
-      [content]="gridContent"
-      [baseColumns]="gridContent.items.length"
+      [content]="{
+        contentType: 'content',
+        items: [
+          {
+            header: 'xyz',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula felis nibh, vitae elementum eros bibendum ac. Nam sit amet quam urna. Morbi diam orci, varius eu consequat ut, semper eu urna. Praesent id lacus neque. Sed a porta nisl. Aenean egestas leo lectus, quis tempus urna eleifend et. Vestibulum enim turpis, ultricies ut laoreet quis, placerat eu enim. Curabitur at aliquet mauris.'
+          },
+          {
+            header: 'xyz',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula felis nibh, vitae elementum eros bibendum ac. Nam sit amet quam urna. Morbi diam orci, varius eu consequat ut, semper eu urna. Praesent id lacus neque. Sed a porta nisl. Aenean egestas leo lectus, quis tempus urna eleifend et. Vestibulum enim turpis, ultricies ut laoreet quis, placerat eu enim. Curabitur at aliquet mauris.'
+          },
+          {
+            header: 'xyz',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula felis nibh, vitae elementum eros bibendum ac. Nam sit amet quam urna. Morbi diam orci, varius eu consequat ut, semper eu urna. Praesent id lacus neque. Sed a porta nisl. Aenean egestas leo lectus, quis tempus urna eleifend et. Vestibulum enim turpis, ultricies ut laoreet quis, placerat eu enim. Curabitur at aliquet mauris.'
+          },
+          {
+            header: 'xyz',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula felis nibh, vitae elementum eros bibendum ac. Nam sit amet quam urna. Morbi diam orci, varius eu consequat ut, semper eu urna. Praesent id lacus neque. Sed a porta nisl. Aenean egestas leo lectus, quis tempus urna eleifend et. Vestibulum enim turpis, ultricies ut laoreet quis, placerat eu enim. Curabitur at aliquet mauris.'
+          }
+        ]
+      }"
+      [baseColumns]="4"
     ></lp-grid>
   </div>
   <div class="section-container">
     <lp-grid
       orientation="left"
       type="testimonial"
-      [content]="testimonialContent"
-      [baseColumns]="testimonialContent.items.length"
+      [content]="{
+        contentType: 'testimonial',
+        title: 'What people are saying',
+        items: [
+          {
+            name: 'Person A',
+            title: 'Person\'s title',
+            testimonial:
+              'Sed a porta nisl. Aenean egestas leo lectus, quis tempus urna eleifend et. Vestibulum enim turpis, ultricies ut laoreet quis, placerat eu enim. Curabitur at aliquet mauris.'
+          },
+          {
+            name: 'Person B',
+            title: 'Person\'s title',
+            testimonial:
+              'Sed a porta nisl. Aenean egestas leo lectus, quis tempus urna eleifend et. Vestibulum enim turpis, ultricies ut laoreet quis, placerat eu enim. Curabitur at aliquet mauris.'
+          },
+          {
+            name: 'Person C',
+            title: 'Person\'s title',
+            testimonial:
+              'Sed a porta nisl. Aenean egestas leo lectus, quis tempus urna eleifend et. Vestibulum enim turpis, ultricies ut laoreet quis, placerat eu enim. Curabitur at aliquet mauris.'
+          }
+        ]
+      }"
+      [baseColumns]="3"
     ></lp-grid>
   </div>
   <div class="section-container">
     <lp-header
       headline="What are you waiting for?"
-      description="Join now before times runs out"
+      description="Get it now before times runs out"
       belowButtonText="No spam - we promise!"
-      [submitSettings]="submitSettings"
+      [submitSettings]="{
+        target: 'https://192.168.1.170:8000/signup',
+        buttonText: 'Sign up!',
+        buttonClickAlertText: 'Thanks for signing up!',
+        textFieldCssWidth: '10'
+      }"
       staticHeadlineSize="32px"
     >
     </lp-header>
