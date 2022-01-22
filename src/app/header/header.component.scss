@@ -1,11 +1,13 @@
 @use '/src/variables.scss';
 .container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
 }
-
+.container .description-block {
+  text-align: center;
+}
 .description-block {
   display: flex;
+  margin: auto 0;
   .description {
     margin: auto;
   }
@@ -18,10 +20,9 @@
 }
 
 .image-block {
-  display: flex;
+  margin: auto;
   img {
-    margin: auto;
-    padding: 10px 0;
+    width: 80vw;
   }
 }
 
@@ -48,15 +49,13 @@ p.below-button-text {
 }
 @media (min-width: (variables.$mobile-width - 400)) {
   .two-pane {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
     .description-block {
+      text-align: left;
+
       display: inline;
       .headline-section {
         max-width: 90%;
-        h1 {
-          font-size: 3vw;
-          display: inline-block;
-        }
       }
       .description-section {
         max-width: 70%;
@@ -64,16 +63,22 @@ p.below-button-text {
           font-size: 20px;
         }
       }
-    }
-
-    .image-block {
-      display: flex;
-      max-width: 25%;
-      img {
-        width: 15vw;
-        display: block;
-        min-height: initial;
+      p.below-button-text {
+        margin: 0 0 0 25px;
       }
+    }
+  }
+
+  h1 {
+    font-size: 4vw;
+    display: inline-block;
+  }
+  .image-block {
+    margin: auto;
+    img {
+      max-width: 130%;
+      width: auto;
+      height: auto;
     }
   }
 }
