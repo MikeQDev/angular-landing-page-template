@@ -45,7 +45,7 @@
       <p class="below-button-text">{{ belowButtonText }}</p>
     </div>
   </div>
-  <div *ngIf="orientation !== 'center'" class="image-block">
+  <div *ngIf="imageUrl !== ''" class="image-block">
     <img
       [ngStyle]="{
         transform: imageTransform

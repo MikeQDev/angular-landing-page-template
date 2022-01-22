@@ -7,9 +7,12 @@ h4,
 h5,
 h6,
 a {
-  font-family: Inter, sans-serif;
+  // font-family: Inter, sans-serif;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, helvetica neue,
+    segoe ui, oxygen, ubuntu, cantarell, open sans, sans-serif;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
