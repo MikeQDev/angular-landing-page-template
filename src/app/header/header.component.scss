@@ -1,6 +1,7 @@
 @use '/src/variables.scss';
 .container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 .container .description-block {
   text-align: center;
@@ -50,8 +51,9 @@ p.below-button-text {
 }
 @media (min-width: (variables.$mobile-width - 400)) {
   .two-pane {
-    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
     .description-block {
+      width: 75%;
       text-align: left;
 
       display: inline;
@@ -60,12 +62,22 @@ p.below-button-text {
       }
       .description-section {
         max-width: 70%;
-        p {
-          font-size: 20px;
-        }
       }
       p.below-button-text {
         margin: 0 0 0 25px;
+      }
+    }
+    .image-block {
+      width: 25%;
+      img {
+        max-width: 130%;
+      }
+    }
+  }
+  .description-block {
+    .description-section {
+      p {
+        font-size: 20px;
       }
     }
   }
@@ -78,7 +90,6 @@ p.below-button-text {
   .image-block {
     margin: auto;
     img {
-      max-width: 130%;
       width: auto;
       height: auto;
     }
