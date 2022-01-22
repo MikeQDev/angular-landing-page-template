@@ -22,6 +22,8 @@ h1 {
   img {
     margin: auto;
     user-select: none;
+    max-width: 80vw;
+    max-height: 50vh;
   }
 }
 
@@ -34,6 +36,10 @@ h1 {
   }
   .textBlock,
   .imageBlock {
+    img {
+      max-width: 35vw;
+      max-height: 35vh;
+    }
     width: 50%;
   }
 }
