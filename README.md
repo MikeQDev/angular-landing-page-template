@@ -14,7 +14,7 @@ Quickly generate landing pages based on premade components
 4. Update `src/variables.scss` and `src/variables.ts` to set color scheme and mobile-width
 5. Update `src/favicon.ico` to use a custom favicon
 6. `ng serve [--host 0.0.0.0]` to view page
-7. Deploy
+7. Deploy `ng build && scp -r dist/landing-page/ x@y.com:`
 
 TODO: explore breaking out components into separate librraries, for easier versioning & updating
 

@@ -17,11 +17,7 @@
           id="noRedirect"
           style="display: none"
         ></iframe>
-        <form
-          [action]="submitSettings.target"
-          method="POST"
-          target="noRedirect"
-        >
+        <form [action]="submitSettings.target" method="GET" target="noRedirect">
           <input
             type="text"
             name="emailAddress"
