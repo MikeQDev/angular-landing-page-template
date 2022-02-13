@@ -24,7 +24,7 @@
 
 `belowButtonText`: faded text near bottom of component
 
-`submitSettings`: object of `{target, buttonText, buttonClickAlertText, textFieldCssWidth}`
+`submitSettings`: object of `{target, buttonText, buttonClickAlertText, textFieldCssWidth, location}` (target is the URL that will receive form info, location is redirect)
 
 ## Sample HTML usage
 

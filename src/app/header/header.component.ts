@@ -45,7 +45,15 @@ export class HeaderComponent {
         form?.submit();
         form?.reset();
         if (this.submitSettings.buttonClickAlertText) {
-          window.alert(this.submitSettings.buttonClickAlertText);
+          // set Timeout else alert will need to be closed before submit executes. Too short a timeout and alert goes away too quick
+          setTimeout(() => {
+            window.alert(this.submitSettings.buttonClickAlertText);
+            window.location = this.submitSettings.location;
+          }, 200);
+        } else {
+          if (this.submitSettings.location) {
+            window.location = this.submitSettings.location;
+          }
         }
       } else {
         window.alert('Please enter a valid email address');
