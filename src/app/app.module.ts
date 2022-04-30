@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { ButtonComponent } from './widgets/button/button.component';
 import { DualPaneComponent } from './dual-pane/dual-pane.component';
 import { GridComponent } from './grid/grid.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { GridComponent } from './grid/grid.component';
     DualPaneComponent,
     GridComponent,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
