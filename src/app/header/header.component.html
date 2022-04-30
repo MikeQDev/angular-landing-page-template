@@ -18,12 +18,18 @@
           style="display: none"
         ></iframe>
         <form [action]="submitSettings.target" method="GET" target="noRedirect">
-          <input
-            type="text"
-            name="emailAddress"
-            placeholder="Enter email"
-            [size]="submitSettings.textFieldCssWidth || 10"
-          />
+          <mat-form-field appearance="standard">
+            <mat-label>Email</mat-label>
+
+            <input
+              type="email"
+              matInput
+              name="emailAddress"
+              placeholder="Enter email"
+              [size]="submitSettings.textFieldCssWidth || 10"
+            />
+          </mat-form-field>
+
           <lp-button
             [text]="submitSettings.buttonText"
             (click)="performSubmit($event)"
