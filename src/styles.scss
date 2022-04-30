@@ -11,7 +11,7 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$landing-page-primary: mat.define-palette(mat.$indigo-palette);
+$landing-page-primary: mat.define-palette(mat.$teal-palette);
 $landing-page-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
@@ -40,8 +40,8 @@ $shaded-color: map-get($landing-page-primary, 800);
 $lighter-color: map-get($landing-page-primary, 500);
 $mobile-width: 1366px;
 // background colors
-$even-color: #ffffff;
-$odd-color: #f3f3f3; // or map get: 50
+$odd-color: #ffffff;
+$even-color: map-get($landing-page-primary, 50); // or #f3f3f3
 
 h1,
 h2,
