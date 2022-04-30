@@ -1,9 +1,5 @@
 @use '/src/variables.scss';
 
-h1 {
-  color: variables.$primary-color;
-}
-
 .container {
   display: flex;
   flex-direction: column;
