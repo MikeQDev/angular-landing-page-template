@@ -34,13 +34,22 @@ $landing-page-theme: mat.define-light-theme(
 // that you are using.
 @include mat.all-component-themes($landing-page-theme);
 
+// Refer to https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+$primary-color: map-get($landing-page-primary, 900);
+$shaded-color: map-get($landing-page-primary, 800);
+$lighter-color: map-get($landing-page-primary, 500);
+$mobile-width: 1366px;
+// background colors
+$even-color: #ffffff;
+$odd-color: #f3f3f3; // or map get: 50
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: map-get($landing-page-primary, 900);
+  color: $primary-color;
 }
 
 body {

@@ -1,4 +1,4 @@
-@use '/src/variables.scss';
+@use '/src/styles.scss';
 
 .container {
   display: flex;
@@ -23,7 +23,7 @@
   }
 }
 
-@media (min-width: variables.$mobile-width) {
+@media (min-width: styles.$mobile-width) {
   .container {
     flex-direction: row;
   }
