@@ -11,7 +11,7 @@ Quickly generate landing pages based on premade components
 1. `npm install` to install dependencies
 2. Update `src/app/index.html` to set page title and metatags
 3. Update `src/app/app.component.{html,ts}` to configure page content
-4. Update `src/variables.scss` and `src/variables.ts` to set color scheme and mobile-width
+4. Update `src/styles.scss` and `src/variables.ts` to set color scheme and mobile-width
 5. Update `src/favicon.ico` to use a custom favicon
 6. `ng serve [--host 0.0.0.0]` to view page
 7. Deploy `ng build && scp -r dist/landing-page/ x@y.com:`

@@ -1,8 +1,4 @@
-@use '/src/variables.scss';
-
-h1 {
-  color: variables.$primary-color;
-}
+@use '/src/styles.scss';
 
 .container {
   display: flex;
@@ -27,7 +23,7 @@ h1 {
   }
 }
 
-@media (min-width: variables.$mobile-width) {
+@media (min-width: styles.$mobile-width) {
   .container {
     flex-direction: row;
   }

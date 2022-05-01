@@ -1,4 +1,4 @@
-@use '/src/variables.scss';
+@use '/src/styles.scss';
 
 .main-content {
   margin: 0 auto;
@@ -6,18 +6,18 @@
   & > .section-container > * {
     display: block;
     margin: 10px 0;
-    padding: 20px;
-    max-width: variables.$mobile-width;
+    padding: 20px 5%;
+    max-width: styles.$mobile-width;
     margin: auto;
   }
 
   & > *:nth-child(even) {
-    background-color: variables.$even-color;
+    background-color: styles.$even-color;
   }
   & > *:nth-child(odd) {
-    background-color: variables.$odd-color;
+    background-color: styles.$odd-color;
   }
-  @media (min-width: (variables.$mobile-width - 400)) {
+  @media (min-width: (styles.$mobile-width - 400)) {
     & > *:first-child {
       padding-top: 30px;
     }
