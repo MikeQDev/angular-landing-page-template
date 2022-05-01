@@ -12,30 +12,20 @@
         <p>{{ description }}</p>
       </div>
       <div *ngIf="submitSettings" class="email-section">
-        <iframe
-          name="noRedirect"
-          id="noRedirect"
-          style="display: none"
-        ></iframe>
-        <form [action]="submitSettings.target" method="GET" target="noRedirect">
-          <mat-form-field appearance="standard">
-            <mat-label>Email</mat-label>
+        <mat-form-field appearance="standard">
+          <mat-label>Email Address</mat-label>
 
-            <input
-              type="email"
-              matInput
-              name="emailAddress"
-              placeholder="Enter email"
-              [size]="submitSettings.textFieldCssWidth || 10"
-            />
-          </mat-form-field>
-
-          <lp-button
-            [text]="submitSettings.buttonText"
-            (click)="performSubmit($event)"
-          >
-          </lp-button>
-        </form>
+          <input
+            type="email"
+            matInput
+            [(ngModel)]="emailAddress"
+            name="emailAddress"
+            [size]="submitSettings.textFieldCssWidth || 10"
+          />
+        </mat-form-field>
+        <!-- can't href CTA button, because validation must occur first -->
+        <lp-button [text]="submitSettings.buttonText" (click)="performSubmit()">
+        </lp-button>
       </div>
       <div *ngIf="buttons?.length > 0" class="button-section">
         <lp-button
