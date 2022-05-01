@@ -1,4 +1,4 @@
-@use '/src/styles.scss';
+@use '/src/variables.scss';
 
 .container {
   display: flex;
@@ -42,7 +42,7 @@ p.below-button-text {
   color: #575757;
 }
 
-@media (min-width: (styles.$mobile-width - 400)) {
+@media (min-width: (variables.$mobile-width - 400)) {
   .two-pane {
     flex-direction: row;
     .description-block {

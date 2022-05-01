@@ -2,63 +2,10 @@
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
 // Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat.core();
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-
-// *** ATTN: EDIT MAIN THEME + COLORS HERE ***
-// Refer to https://material.io/design/color/the-color-system.html#tools-for-picking-colors
-$landing-page-primary: mat.define-palette(mat.$teal-palette);
-$primary-color: map-get($landing-page-primary, 900);
-$shaded-color: map-get($landing-page-primary, 800);
-$lighter-color: map-get($landing-page-primary, 500);
-// background colors
-$odd-color: #ffffff;
-$even-color: map-get($landing-page-primary, 50); // or #f3f3f3
-// used in @media min-width; anything >= this value will influence how certain
-// components like dual-pane are laid out. don't forget to update in variables.ts
-$mobile-width: 1280px;
-
-$landing-page-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-
-// The warn palette is optional (defaults to red).
-$landing-page-warn: mat.define-palette(mat.$red-palette);
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$landing-page-theme: mat.define-light-theme(
-  (
-    color: (
-      primary: $landing-page-primary,
-      accent: $landing-page-accent,
-      warn: $landing-page-warn,
-    ),
-  )
-);
+@use '/src/variables.scss';
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($landing-page-theme);
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $primary-color;
-}
-
-body {
-  margin: 0;
-  overflow-x: hidden;
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, helvetica neue,
-    segoe ui, oxygen, ubuntu, cantarell, open sans, sans-serif;
-}
+// the following line takes up a lot of space, not something we want to use in shared variables.scss
+@include mat.all-component-themes(variables.$landing-page-theme);
