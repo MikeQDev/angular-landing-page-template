@@ -38,7 +38,7 @@ $landing-page-theme: mat.define-light-theme(
 $primary-color: map-get($landing-page-primary, 900);
 $shaded-color: map-get($landing-page-primary, 800);
 $lighter-color: map-get($landing-page-primary, 500);
-$mobile-width: 1366px;
+$mobile-width: 1280px;
 // background colors
 $odd-color: #ffffff;
 $even-color: map-get($landing-page-primary, 50); // or #f3f3f3
