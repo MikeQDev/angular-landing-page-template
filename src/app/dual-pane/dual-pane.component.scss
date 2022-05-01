@@ -30,14 +30,12 @@
   .container.imageFirst {
     flex-direction: row-reverse;
   }
-  .textBlock {
-    width: 50%;
-  }
+  .textBlock,
   .imageBlock {
     img {
       max-width: 35vw;
       max-height: 35vh;
     }
-    width: 25%;
+    width: 50%;
   }
 }
