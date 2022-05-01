@@ -11,7 +11,20 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
+
+// *** ATTN: EDIT MAIN THEME + COLORS HERE ***
+// Refer to https://material.io/design/color/the-color-system.html#tools-for-picking-colors
 $landing-page-primary: mat.define-palette(mat.$teal-palette);
+$primary-color: map-get($landing-page-primary, 900);
+$shaded-color: map-get($landing-page-primary, 800);
+$lighter-color: map-get($landing-page-primary, 500);
+// background colors
+$odd-color: #ffffff;
+$even-color: map-get($landing-page-primary, 50); // or #f3f3f3
+// used in @media min-width; anything >= this value will influence how certain
+// components like dual-pane are laid out. don't forget to update in variables.ts
+$mobile-width: 1280px;
+
 $landing-page-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
@@ -33,15 +46,6 @@ $landing-page-theme: mat.define-light-theme(
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($landing-page-theme);
-
-// Refer to https://material.io/design/color/the-color-system.html#tools-for-picking-colors
-$primary-color: map-get($landing-page-primary, 900);
-$shaded-color: map-get($landing-page-primary, 800);
-$lighter-color: map-get($landing-page-primary, 500);
-$mobile-width: 1280px;
-// background colors
-$odd-color: #ffffff;
-$even-color: map-get($landing-page-primary, 50); // or #f3f3f3
 
 h1,
 h2,
