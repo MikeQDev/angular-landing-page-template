@@ -1,3 +1,7 @@
+## DEPRECATED
+
+Check out https://github.com/MikeQDev/landing-page-gen-jekyll/ instead
+
 # Angular Landing Page Template
 
 Quickly generate landing pages based on premade components
