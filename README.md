@@ -2,6 +2,10 @@
 
 Check out https://github.com/MikeQDev/landing-page-gen-jekyll/ instead
 
+Image below, in case archiving repo removes GHPages
+
+![ng](https://user-images.githubusercontent.com/7594721/213890079-f82ee6f4-771d-45a8-9e88-cbf086bc2a3e.jpg)
+
 # Angular Landing Page Template
 
 Quickly generate landing pages based on premade components
